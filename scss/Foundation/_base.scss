@@ -1,0 +1,27 @@
+/*共通部分---------------*/
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family:"Yu Gothic","Roboto",'ヒラギノ角ゴ ProN W3',sans-serif;
+    color : #000; 
+    line-height : 1.0;
+    min-width:320px;
+    padding:0;
+    margin:0;
+}
+
+a {
+    text-decoration: none;
+    color:#000;
+    &:hover {
+        color:#1571DA;
+    }
+}
+
+img {
+    max-width: 100%;
+}

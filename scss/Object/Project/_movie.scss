@@ -1,0 +1,81 @@
+@use "../../Foundation/mixin" as m;
+
+.p-movie {
+    @include m.mq(sp){
+       z-index:0;
+       position:static;
+       margin:0 auto;
+       padding-top:50px;
+       width:100%;
+       text-align: -webkit-center;
+    }
+    width:320px;
+    height:220px;
+    position:absolute;
+    right:20px;
+    z-index:1;
+    top:540px;
+    &__button { //p-movieの範囲内で動かす
+        position:absolute;
+        z-index:2;
+        top:-20px;
+        right:0;
+    }
+    &__wrapper {
+        width:300px;
+        height:200px;
+        left:0;
+        background-color:#1571DA;
+        display:flex;
+        align-items:center;
+        flex-direction: column;
+
+        &__screen {
+           width: 160px;
+           height:90px;
+           background-color:#fff;
+           display:flex;
+           justify-content: center;
+           align-items: center;
+           margin-top:30px;
+           &__button {
+               width:50px;
+               height:50px;
+               background-color:#1571DA;
+               border-radius:25px;
+               position:relative;
+               &::after {
+                content: ''; /* 疑似要素に必須 */
+                width: 0;    /* 幅を0に指定 */
+                height: 0;   /* 高さを0に指定 */
+                border-style: solid;  /* 線の種類を指定 */
+                border-width: 10px 0 10px 20px;  /* 線の幅を指定して三角を作る */
+                border-color: transparent transparent transparent #fff;  /* 左のみ線の色を指定 */
+                position: absolute; /* 相対位置に指定 */
+                top: 30%;  /* 上からの位置 */
+                left: 35%; /* 左からの位置 */
+                }
+           } //button
+        } //screen
+        &__title {
+            color:#fff;
+            font-family: 'Yu Gothic';
+            text-align: center;
+            line-height: 0.6rem;
+            letter-spacing: 0.06rem;
+            
+            &__sub {
+                margin-top:15px;
+                font-size:16px;
+                letter-spacing: 0.02rem;
+            }
+            &__main {
+                margin-top:15px;
+                font-size:20px;
+                font-weight: bold;
+                letter-spacing: 0.02rem;
+            }
+        }
+
+    } //wrapper
+}

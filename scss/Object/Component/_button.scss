@@ -1,0 +1,129 @@
+@use "../../Foundation/mixin" as m;
+
+
+.c-button__white { //お役立ち資料　を基本として
+   width:120px;
+   height:50px;
+   font-family:"Yu Gothic";
+   font-size:14px;
+   font-weight: bold;
+   color:#1571DA;
+   border:1px solid #1571DA;
+   background-color:#fff;
+   border-radius: 4px;
+}
+
+.c-button__blue {
+   width:120px;
+   height:50px;
+   font-family:"Yu Gothic";
+   font-size:14px;
+   font-weight: bold;
+   color:#fff;
+   border:1px solid #1571DA;
+   background-color:#1571DA;
+   border-radius: 4px;
+}
+
+.c-button__delete { //動画のバツボタン
+   @include m.mq(sp){
+      display: none;
+   }
+   width:40px;
+   height:40px;
+   font-size:20px;
+   border: 3px solid #1571DA;
+   color: #1571DA;
+   background-color:#fff;
+   border-radius: 50%;
+   display: block;
+   position: relative;
+   &::before, &::after {
+      content: "";
+      display: block;
+      width: 60%;/*バツ線の長さ*/
+      height: 4px;/*バツ線の太さ*/
+      background: #1571DA;
+      transform: rotate(45deg);
+      transform-origin:0% 50%;
+      position: absolute;
+      top: calc(28% - 2px);
+      left: 28%;
+   }
+   &::after{
+      transform: rotate(-45deg);
+      transform-origin:100% 50%;
+      left: auto;
+      right: 28%;
+   }
+}
+
+.c-button__gray {
+   width:120px;
+   height:50px;
+   font-family:"Yu Gothic";
+   font-size:14px;
+   font-weight: bold;
+   color:#fff;
+   border:1px solid darkgray;
+   background-color:darkgray;
+   border-radius: 4px;
+}
+
+.c-button__humburger { //sp時ヘッダーに表示させる三本線
+   display :block;
+   width : 50px;
+   height : 50px;
+   background-color:  #1571DA;
+   color:#fff;
+   position        : relative;        //三本線をアニメーションで動かしたいのでこれを親要素としてrelativeの設定が必要//
+   &::before,
+   &::after {
+       content          : "";                   //中身空の疑似要素用//
+       width            : 23px;
+       height           : 2px;
+       background-color : #fff;
+       position         : absolute;            //上下2本の線を真ん中の線の親を基準に配置するため//
+       left             : calc(50% - (#{23px} / 2)); //これで線が枠のちょうど真ん中にくる//
+       display          : block;                //疑似要素を表示させるため//
+       transition       : transform 0.2s;    //アニメーションのときの作動//
+   }
+   &::before {
+       top: 15px;
+   }
+   &::after {
+       bottom: 15px;
+   }
+   > span {                          //真ん中の線の設定//
+       width            : 23px;
+       height           : 2px;
+       font-size        : 0;
+       background-color : #fff;
+       background-size  : auto 2px;
+       position         : absolute;
+       left             : calc(50% - (#{23px} / 2));
+       top              : calc(50% - 1px );                //上から
+       transition       : transform 0.2s;
+   }
+
+   &.is-open {
+       background-color: #fff;
+       &::before {
+           transform: rotate(45deg);
+           top: 25px;                      //中心が上から25px//
+           background-color: #fff;
+       }
+       &::after {
+           transform: rotate(-45deg);
+           top: 25px;
+           background-color: #fff;
+       }
+       > span {
+           background: none;
+       }
+   }
+
+   body.is-open {         //メニュー自体はスクロールさせるけど下の本体はスクロールさせないため//
+      position: fixed;
+   }
+}

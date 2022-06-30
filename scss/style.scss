@@ -1,0 +1,47 @@
+/*
+Theme Name: baigie
+Description: baigie b to b site
+Version: 1.0.0
+Theme URI:https://github.com/kyon-katsube/origin.git 
+Author: Kyon-Katsube
+Author URI: https://wp.yat-net.net.com
+Tags: right-sidebar, blog
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: Corporate_code2
+*/
+
+
+//Foundation
+@use "Foundation/base";
+@use "Foundation/mixin";
+
+//Layout
+@use "Layout/l-header";
+// @use "Layout/l-main";
+@use "Layout/l-footer";
+
+//Object
+/* Component--------------------- */
+@use "Object/Component/title";
+@use "Object/Component/button";
+@use "Object/Component/underline";
+
+/* Project------------------------ */
+@use "Object/Project/header";
+@use "Object/Project/mainvisual";
+@use "Object/Project/movie";
+@use "Object/Project/section-title";
+@use "Object/Project/about";
+@use "Object/Project/footer";
+@use "Object/Project/archive";
+@use "Object/Project/feature";
+@use "Object/Project/destination";
+@use "Object/Project/single";
+@use "Object/Project/example";
+@use "Object/Project/tourinfo";
+@use "Object/Project/news";
+@use "Object/Project/contact";
+
+
+/* Utility----------------------- */

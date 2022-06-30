@@ -1,0 +1,23 @@
+@use "../../Foundation/mixin" as m;
+
+
+.c-title {
+   font-size:36px;
+   font-weight:normal;
+   letter-spacing:0.1em;
+   &__18bold {
+      font-size:18px;
+      font-weight:bold;
+      padding-bottom:15px;
+      @include m.mq(sp){
+         font-size:12px;
+      }
+   }
+   &__28bold {
+      font-size:28px;
+      font-weight:bold;
+      @include m.mq(sp){
+         font-size:20px;
+      }
+   }
+}

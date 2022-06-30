@@ -1,0 +1,16 @@
+@use "../../Foundation/mixin" as m;
+
+
+.c-underline{
+    &--bold {
+        border-bottom:3px solid #000;
+        text-align: center;
+    }
+    &--normal {
+        border-bottom: 1px solid #0000;
+        text-align: center;
+    }
+    &--empty{
+        border-bottom: 1px solid #0000;
+    }
+}

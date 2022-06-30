@@ -1,0 +1,113 @@
+@use "../../Foundation/mixin" as m;
+
+//タイトルまわりp-featureは各箇所統一なのでp-feature参照
+
+.p-tourinfo {
+    &__wrapper {
+        display:flex;
+        margin:35px 40px;
+        @include m.mq(sp){
+            display:block;
+            margin:0 auto;
+            padding-bottom:20px;
+        }
+        &__contents {
+            display:flex;
+            flex-direction: column;
+            margin:0 auto;
+            padding:20px;
+            &__img {
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 0;
+                    border-top: 50px solid #f00;
+                    border-right: 50px solid transparent;
+                }      
+                &::after {
+                    content: "受付中";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    font-size: 10px;
+                    font-weight:bold;
+                    color: #FFF;
+                    transform: rotate(-45deg) translate(-7px, 7px);
+                }  
+                & img {
+                    object-fit:cover;
+                    margin-bottom:20px;
+                }
+            }
+            &__imgstop { //受付終了
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 0;
+                    border-top: 50px solid darkgray;
+                    border-right: 50px solid transparent;
+                }      
+                &::after {
+                    content: "受付終了";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    font-size: 10px;
+                    font-weight:bold;
+                    color: #FFF;
+                    transform: rotate(-45deg) translate(-11px, 11px);
+                }          
+                & img {
+                    object-fit:cover;
+                    margin-bottom:20px;
+                }
+            }
+            &__text {
+                margin:0 20px 20px 20px;
+        //departure はfontsizeデフォルト
+                &__departure {
+                    padding-bottom:10px;
+                }
+                &__title {
+                    color:#1571DA;
+                    font-size: 20px;
+                    font-weight: bold;
+                    padding-bottom:20px;
+                }
+                &__detail {
+                    font-size: 14px;
+                    font-weight: normal;
+                    line-height:1.4rem;
+                }
+                &__comment {
+                    font-size:14px;
+                    line-height:1.4rem;
+                }
+                &__point {
+                    font-weight:bold;
+                    font-size:14px;
+                    line-height:1.4rem;
+                    padding-top:10px;
+                }
+            }
+            &__button {
+                margin : 0 auto;
+                width:80%;
+            }
+        }
+
+    } //wrapper
+    &__button {
+        width:200px;
+        display:block;
+        margin:0 auto;
+    }
+}

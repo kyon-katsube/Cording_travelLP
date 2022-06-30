@@ -1,0 +1,70 @@
+@use "../../Foundation/mixin" as m;
+
+//タイトルまわりp-featureは各箇所統一なのでp-feature参照
+
+.p-news {
+    margin-bottom:120px;
+    @include m.mq(sp){
+        margin-bottom:80px;
+    }
+    &__wrapper {
+        display:flex;
+        flex-direction: column;
+        margin:35px 40px;
+        @include m.mq(sp){
+            display:block;
+            margin:0 auto;
+            padding-bottom:20px;
+        }
+        &__list {
+            display:flex;
+            border-bottom:1px solid lightgray;
+            list-style-type: none;
+            padding:20px;
+            margin:10px 0;
+            align-items: center;
+            @include m.mq(sp){
+                display:block;
+                line-height:2.0rem;
+                margin:0 20px;
+            }
+
+            &__date {
+                font-size: 18px;
+                font-weight: bold;
+                font-family: 'Roboto';
+                padding-right:30px;
+               
+            }
+            &__category {
+                margin-right:30px;
+                padding:5px 15px;
+                font-weight:bold;
+                background-color:lightgray;
+                color:rgb(74, 73, 73);
+                @include m.mq(sp){
+                    padding:0 15px;
+                    line-height:1.2rem;
+                }
+            }
+        }
+    } //wrapper
+    &__button {
+        width:200px;
+        display:block;
+        margin:0 auto;
+        
+    }
+}
+
+.p-news__wrapper__list p {
+    @include m.mq(sp){
+        display:inline-block;
+    }
+}
+
+.p-news__wrapper__list a {
+    @include m.mq(sp){
+        display:block;
+    }
+}

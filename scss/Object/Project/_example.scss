@@ -1,0 +1,62 @@
+@use "../../Foundation/mixin" as m;
+
+//タイトルまわりp-featureは各箇所統一なのでp-feature参照
+
+.p-example {
+    &__wrapper {
+        display:flex;
+        margin:35px 40px;
+        @include m.mq(sp){
+            display:block;
+            margin:0 auto;
+            padding-bottom:20px;
+        }
+        &__contents {
+            display:flex;
+            flex-direction: column;
+            margin:0 auto;
+            & img {
+                object-fit:cover;
+                margin:20px;
+                @include m.mq(sp){
+                    width:100%;
+                    height:auto;
+                    margin:0 auto;
+                }
+            }
+            &__text {
+                margin:0 20px;
+                @include m.mq(sp){
+                    margin:25px 40px;
+                }
+                &__title {
+                    color:#1571DA;
+                    font-size: 20px;
+                    font-weight: bold;
+                    padding-bottom:25px;
+                    @include m.mq(sp){
+                        padding-bottom:12px;
+                    }
+                }
+                &__name {
+                    font-size: 16px;
+                    font-weight: bold;
+                    padding-bottom:15px;
+                    @include m.mq(sp){
+                        padding-bottom:10px;
+                    }
+                }
+                &__comment {
+                    font-size:12px;
+                    line-height:1.2rem;
+                }
+            }
+        }
+
+    } //wrapper
+    &__button {
+        width:200px;
+        display:block;
+        margin:0 auto;
+    }
+}

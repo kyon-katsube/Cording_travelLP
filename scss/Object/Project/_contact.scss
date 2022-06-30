@@ -1,0 +1,142 @@
+@use "../../Foundation/mixin" as m;
+
+//タイトルまわりp-featureは各箇所統一なのでp-feature参照
+
+.p-contact {
+    background-color: #ccc;
+    padding-bottom:70px;
+    &__button {
+        margin : 0 auto;
+        width:500px;
+        height:80px;
+        font-size:22px;
+        display:block;
+        @include m.mq(sp){
+            width:290px;
+            height:50px;
+            margin:0 auto;
+            font-size:16px;
+        }
+    }
+    &__wrapper {
+        padding:30px 0;
+        display:flex;
+        align-items: center;
+        justify-content:center;
+        width:100%;
+        @include m.mq(sp){
+            display:block;
+            margin:0 auto;
+            padding-bottom:15px;
+            text-align: center;
+        }
+        &__comment {
+            font-size: 18px;
+            font-weight: bold;
+            padding-right:30px;
+            @include m.mq(sp){
+                font-size: 14px;
+                padding-right:0;
+            }
+        }
+        & img {
+            width:50px;
+            height:50px;
+            @include m.mq(sp){
+                display:none;
+            }
+        }
+        &__tel {
+            font-family: 'Roboto';
+            font-size: 34px;
+            font-weight: bold;
+            padding-right:10px;
+            align-items: center;
+            @include m.mq(sp){
+                font-size: 26px;
+                padding:5px 0;
+            }
+        }
+        &__hours {
+            font-size: 14px;
+            font-weight:bold;
+            padding-right:30px;
+            @include m.mq(sp){
+                font-size: 12px;
+                padding-right:0;
+            }
+        }
+        &__faq {
+            color:#1571DA;
+            font-size: 14px;
+            font-weight:bold;
+            padding:10px 30px;
+            border-left:1px solid darkgray;
+            @include m.mq(sp){
+                font-size: 12px;
+            }
+        }
+    }//wrapper
+
+    &__useful {
+        align-items:center;
+        display: flex;
+        justify-content:space-between;
+        height:120px;
+        margin:0 10%;
+        background-color:#fff;
+        @include m.mq(sp){
+            display:block;
+            height:auto;
+            text-align:center;
+        }
+        &__wrapper {
+            display:flex;
+            align-items: center;
+            @include m.mq(sp){
+                padding:20px;
+            }
+            &__free {
+                font-size:18px;
+                font-weight:bold;
+                border:2px solid #000;
+                border-radius:50%;
+                width:60px;
+                height:60px;
+                text-align: center;
+                padding-top:19px;
+                margin-right:30px;
+                margin-left:30px;
+                @include m.mq(sp){
+                    width:40px;
+                    height:40px;
+                    min-width:40px;
+                    font-size:12px;
+                    padding-top:12px;
+                    margin-right:9px;
+                    margin-left:9px;
+                }
+            }
+            &__text {
+                font-size:18px;
+                font-weight:bold;
+                @include m.mq(sp){
+                    font-size:14px;
+                }
+            }
+        }//wrapper
+        &__download {
+            font-weight:bold;
+            color:#1571DA;
+            padding:22px 54px;
+            border:1px solid #1571DA;
+            border-radius: 5px;
+            margin-right:30px;
+            @include m.mq(sp){
+                font-size:16px;
+                padding:17px 29px;
+                margin:0 20px 20px 20px;
+            }
+        }
+    }
+}
