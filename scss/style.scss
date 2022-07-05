@@ -29,7 +29,6 @@ Text Domain: Corporate_code2
 
 /* Project------------------------ */
 @use "Object/Project/header";
-@use "Object/Project/mainvisual";
 @use "Object/Project/movie";
 @use "Object/Project/section-title";
 @use "Object/Project/about";
@@ -41,7 +40,9 @@ Text Domain: Corporate_code2
 @use "Object/Project/example";
 @use "Object/Project/tourinfo";
 @use "Object/Project/news";
-@use "Object/Project/contact";
+@use "Object/Project/concept";
+@use "Object/Project/slick";
+@use "Object/Project/parallax";
 
 
 /* Utility----------------------- */

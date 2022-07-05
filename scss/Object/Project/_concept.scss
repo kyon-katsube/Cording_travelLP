@@ -1,0 +1,38 @@
+@use "../../Foundation/mixin" as m;
+
+
+.p-concept {
+    padding:50px 20px; //section共通
+    background-color:#e0e0e0;
+    &__wrapper {
+        margin:0 150px;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:10px;
+        list-style: none;
+        &__img { //メイン画像
+            // width: 100%;
+            // height: auto;
+            vertical-align: bottom;/*画像の下にできる余白を削除*/
+        }
+        &__contents {
+            display:block;
+            &__detail {
+                display:flex;
+                justify-content: flex-start; 
+                margin-bottom:20px;
+                & img {
+                    width:109px;
+                    height:67px;
+                    margin-right:20px;
+                    object-fit:cover;
+                    vertical-align: bottom;/*画像の下にできる余白を削除*/
+                    cursor:pointer;
+                }
+                &__text {
+                    line-height:1.25rem;
+                }
+            }
+        }
+    }
+}

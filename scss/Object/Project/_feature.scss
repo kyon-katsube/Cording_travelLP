@@ -1,68 +1,65 @@
 @use "../../Foundation/mixin" as m;
 
 .p-feature {
-    @include m.mq(sp){
-        margin-bottom:20px;
-    }
-    &__title { //c-title間の行間とレスポンシブのフォントサイズはcにて設定
-        text-align :center;
-        padding-top:120px;
-        padding-bottom:35px;
-        line-height:1.5rem;
-        @include m.mq(sp){
-            margin:0 4.6%;
-            padding-top:80px;
+  padding:50px 20px; //section共通
+    &__box {
+        border:2px solid #ff9000;
+        &__tab {
+            list-style-type: none;
+            border-bottom:2px solid #ff9000;
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-content: space-between;
+            font-size:24px;
+            font-weight:bold;
+            & li a {
+                color:#fff;
+                display:block;
+                text-align: center;
+                padding:20px 50px;
+            }
+            &__tab1 a {
+                background:#ff9000;
+            }
+            &__tab2 a { 
+                background:#3ebc01;
+            }
+            &__tab3 a {
+                background:#1e1efc;
+            }
+            &__tab4 a {
+                background:#fc1e77;
+            }
+              /*liにactiveクラスがついた時の形状*/
+            &__tab1 a:hover,
+            &__tab1.active {
+                color:#ff9000;
+                background:#fff;
+            }
+            &__tab2 a:hover {
+                color:#3ebc01;
+                background:#fff;
+            }
+            &__tab3 a:hover {
+                color:#1e1efc;
+                background:#fff;
+            }
+            &__tab4 a:hover  {
+                color:#fc1e77;
+                background:#fff;
+            }
         }
-    }
-    &__wrapper {
-        display:grid;
-        grid-template-columns:1fr 1fr 1fr;
-        gap:20px;
-        margin:35px 40px;
-        @include m.mq(sp){
-            display:block;
-            margin:0 auto;
-            padding-bottom:20px;
+        &__wrapper {
+            &__contents {
+                display: none;
+            }
+            /*is-activeというクラスがついた時の形状*/
+            &__contents.is-active {
+                display:grid;
+                padding:50px 20px;
+                gap:30px;
+                grid-template-columns: 1fr 1fr;
+            }
         }
-        &__contents {
-            text-align: center;
-            position:relative;
-            & img {
-                object-fit:contain;
-                background-color:gray;
-                opacity:0.5;
-            }
-            &__number {
-                font-size:60px;
-                font-weight:bold;
-                font-family: 'Roboto';
-                color:gray;
-                position:absolute;
-                top:30px;
-                left:48%;
-                @include m.mq(sp){
-                    font-size:50px;
-                    top:14px;
-                }
-            }
-            &__text {
-                padding:10% 6%;
-                font-size:18px;
-                font-weight: bold;
-                position:absolute;
-                top:50%;
-                line-height:1.8rem;
-                width:100%;
-                @include m.mq(sp){
-                    font-size:16px;
-                    top:55%;
-                }
-            }
-        } //contents
-    } //wrapper
-    &__button {
-        width:200px;
-        display:block;
-        margin:0 auto;
     }
 }

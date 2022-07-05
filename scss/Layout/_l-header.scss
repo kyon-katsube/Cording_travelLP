@@ -2,9 +2,7 @@
 
 
 .l-header {          //header全体
-    width  :100%;
-    height :80px;
-    @include m.mq(sp){
-        height:50px;
+    .l-header {   /*スクロールしても上部固定*/
+       
     }
 }
