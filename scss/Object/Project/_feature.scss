@@ -11,7 +11,7 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
             justify-content: space-between;
             font-size:24px;
-            font-weight:bold;
+            font-weight:bold;       
             & li a {
                 color:#fff;
                 display:block;
@@ -31,8 +31,7 @@
                 background:#fc1e77;
             }
               /*liにactiveクラスがついた時の形状*/
-            &__tab1 a:hover,
-            &__tab1.active {
+            &__tab1 a:hover{
                 color:#ff9000;
                 background:#fff;
             }
@@ -48,6 +47,23 @@
                 color:#fc1e77;
                 background:#fff;
             }
+            &__tab1.active {
+                color:#ff9000;
+                background:#fff;
+            }
+            &__tab2.active {
+                color:#3ebc01;
+                background:#fff;
+            }
+            &__tab3.active {
+                color:#1e1efc;
+                background:#fff;
+            }
+            &__tab4.active {
+                color:#fc1e77;
+                background:#fff;
+            }
+
         }
         &__wrapper {
             &__contents {

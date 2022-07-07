@@ -43,6 +43,10 @@ Text Domain: Corporate_code2
 @use "Object/Project/concept";
 @use "Object/Project/slick";
 @use "Object/Project/parallax";
+@use "Object/Project/voice";
+@use "Object/Project/company";
+@use "Object/Project/contact";
 
 
 /* Utility----------------------- */
+@use "Object/Utility/margin";

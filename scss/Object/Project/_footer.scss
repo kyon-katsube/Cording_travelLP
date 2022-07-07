@@ -2,5 +2,13 @@
 
 
 .p-footer {
-   
+    background-color:#009da0;
+    height:50px;
+    &__copyright {
+        font-size:12px;
+        text-align:center;
+        align-items: center;
+        color:#fff;
+        line-height:50px;
+    }
 }

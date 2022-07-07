@@ -1,0 +1,74 @@
+@use "../../Foundation/mixin" as m;
+
+
+.p-contact {
+    padding:50px 20px; //section共通
+    &__wrapper {
+        margin:0 150px 40px 0;
+        display:flex;
+        justify-content: space-between;
+        gap:20px;
+        &__table {
+            border:0px none;
+            width:100%;  
+            border-collapse: collapse;
+            &__tr {
+                height:60px;
+                &__item {
+                    width:200px;
+                    padding:20px;
+                    text-align:center;
+                } 
+                &__must {
+                    color:#fff;
+                    width:100px;
+                    margin:20px;
+                    text-align:center;
+                }    
+                &__must>span {
+                    background-color: red;
+                    padding:3px 5px;
+                    font-size:12px;
+                }
+                &__form {
+                    line-height:1.5rem;
+                    height:30px;
+                    padding-left:30px;
+                    & label {
+                        padding-right:50px;
+                    }
+                    &__input{
+                        border:0.5px solid #333;
+                        background-color: #fff;
+                        width:300px;
+                        height:40px;
+                    }
+                    &__email{
+                        border:0.5px solid #333;
+                        background-color: #fff;
+                        width:550px;
+                        height:40px;
+                    }
+                    &__textarea{
+                        border:0.5px solid #333;
+                        background-color: #fff;
+                        width:100%;
+                        height:150px;
+                        margin-top:20px;
+                    }
+                }
+            }
+            &__tr:nth-child(even){
+                background-color: #e0e0e0;
+            }
+        }//table
+    }
+    & button {
+        background:#fdc543;
+        font-size:30px;
+        padding:30px;
+        margin:0 auto; 
+        display:block;
+      
+    }
+}

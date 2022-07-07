@@ -34,27 +34,27 @@
             <img src="img/mamasan_logo.png">
             <div class="p-header__nav__wrapper">
                <ul class="p-header__nav__wrapper__ul">
-                  <li class="p-header__nav__wrapper__ul__list"><a href="#">特徴</a></li>
-                  <li class="p-header__nav__wrapper__ul__list"><a href="#">コンセプト</a></li>
-                  <li class="p-header__nav__wrapper__ul__list"><a href="#">先輩たちの声</a></li>
-                  <li class="p-header__nav__wrapper__ul__list"><a href="#">会社概要</a></li>
-                  <li class="p-header__nav__wrapper__ul__list"><a href="#">お問い合わせ</a></li>
+                  <li class="p-header__nav__wrapper__ul__list"><a href="#p-feature">特徴</a></li>
+                  <li class="p-header__nav__wrapper__ul__list"><a href="#p-concept">コンセプト</a></li>
+                  <li class="p-header__nav__wrapper__ul__list"><a href="#p-voice">先輩たちの声</a></li>
+                  <li class="p-header__nav__wrapper__ul__list"><a href="#p-company">会社概要</a></li>
+                  <li class="p-header__nav__wrapper__ul__list"><a href="#p-contact">お問い合わせ</a></li>
                </ul>
             </div><!--wrapper-->
          </div><!--nav-->
       </div><!--p-header-->
    </header>
 
-   <main>
-      <section class="p-feature">
+   <div id="luxy"><!--パララックス用をmain全体に-->
+   <main> 
+      <section class="p-feature luxy-el" data-speed-y="10" id="p-feature">
          <h2 class="p-feature__title c-title">Mamasan & Company の特徴</h2>
-         
          <div class="p-feature__box">
             <ul class="p-feature__box__tab">
-               <li class="p-feature__box__tab__tab1"><a href="#1">特徴1</a></li>
-               <li class="p-feature__box__tab__tab2"><a href="#2">特徴2</a></li>
-               <li class="p-feature__box__tab__tab3"><a href="#3">特徴3</a></li>
-               <li class="p-feature__box__tab__tab4"><a href="#4">特徴4</a></li>
+               <li class="p-feature__box__tab__tab1"><a href="#1" id="click_event">特徴1</a></li>
+               <li class="p-feature__box__tab__tab2"><a href="#2" id="click_event">特徴2</a></li>
+               <li class="p-feature__box__tab__tab3"><a href="#3" id="click_event">特徴3</a></li>
+               <li class="p-feature__box__tab__tab4"><a href="#4" id="click_event">特徴4</a></li>
             </ul>
             <div class="p-feature__box__wrapper">
                <div class="p-feature__box__wrapper__contents is-active" id="1">
@@ -77,9 +77,8 @@
          </div><!--box-->
       </section><!--feature-->
      
-      <section class="p-concept">
+      <section class="p-concept luxy-el" data-speed-y="20" id="p-concept">
          <h2 class="p-concept__title c-title">コンセプト</h2>
-
          <div class="p-concept__wrapper">
             <img src="img/concept_1.jpg" class="p-concept__wrapper__img js-main-img" >
             <div class="p-concept__wrapper__contents js-sub-img">
@@ -98,14 +97,161 @@
             </div><!--contents-->
          </div><!--wrapper-->
       </section>
+      <!--挿入画像-->
+      <img src="img/pallalax.jpg" class="p-parallax luxy-el" data-speed-y="10">
 
-      <img src="img/pallalax.jpg" class="p-parallax">
-     
+      <section class="p-voice luxy-el" data-speed-y="10" id="p-voice">
+         <h2 class="p-voice__title c-title">先輩たちの声</h2>
+         <div class="p-voice__wrapper">
+            <div class="p-voice__wrapper__mediatext u-margin__bottom__50">
+               <div class="p-voice__wrapper__mediatext__img">
+                  <img src="img/senpai1.jpg">
+                  <figcaption>
+                     <p class="p-voice__wrapper__medeatext__img__caption">年代：30代</p>
+                     <p class="p-voice__wrapper__medeatext__img__caption">子供：1人</p>
+                     <p class="p-voice__wrapper__medeatext__img__caption">前職・社歴：営業事務 4年</p>
+                  </figcaption>
+               </div><!--img-->
+               <div class="p-voice__wrapper__mediatext__text">
+                  <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+               </div><!--text-->
+            </div><!--medeatext-->
+            <div class="p-voice__wrapper__mediatext u-margin__top__50">
+               <div class="p-voice__wrapper__mediatext__img">
+                  <img src="img/senpai2.jpg">
+                  <figcaption>
+                     <p class="p-voice__wrapper__mediatext__img__caption">年代：30代</p>
+                     <p class="p-voice__wrapper__mediatext__img__caption">子供：0人</p>
+                     <p class="p-voice__wrapper__mediatext__img__caption">前職・社歴：経理 6年</p>
+                  </figcaption>
+               </div><!--img-->
+               <div class="p-voice__wrapper__mediatext__text">
+                  <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+               </div><!--text-->
+            </div><!--medeatext-->
+         </div><!--wrapper-->
+      </section>
+
+      <section  class="p-company luxy-el" data-speed-y="10" id="p-company">
+         <h2 class="p-company__title c-title">会社概要</h2>
+         <div class="p-company__wrapper">
+            <table class="p-company__wrapper__table">
+               <tr  class="p-company__wrapper__table__tr">
+                  <td class="p-company__wrapper__table__tr__left">商号</td>
+                  <td class="p-company__wrapper__table__tr__right">Mamasan & Company 株式会社</td>
+               </tr>
+               <tr  class="p-company__wrapper__table__tr">
+                  <td class="p-company__wrapper__table__tr__left">所在地</td>
+                  <td class="p-company__wrapper__table__tr__right">東京Office<br>
+                      〒163-1306 東京都新宿区西新宿6-5-1<br>
+                      新宿アイランドタワー6F<br>
+                      <br>
+                      沖縄BPOセンター<br>
+                      〒904-2244 沖縄県うるま市字江洲547番地4<br>
+                      みらいビル2F                  
+                  </td>
+               </tr>
+               <tr  class="p-company__wrapper__table__tr">
+                  <td class="p-company__wrapper__table__tr__left">創業</td>
+                  <td class="p-company__wrapper__table__tr__right">2008年9月</td>
+               </tr>
+               <tr  class="p-company__wrapper__table__tr">
+                  <td class="p-company__wrapper__table__tr__left">事業内容</td>
+                  <td class="p-company__wrapper__table__tr__right u-border__none">クラウドワーク環境による事務処理業務全般の請負<br>
+                      業務プロセス可視化及び最適化コンサルティング<br>
+                      企業再生コンサルティング及び派生業務の請負<br>
+                      コールセンター業務請負
+                  </td>
+               </tr>
+            </table>
+            <img src="img/company_map.jpg" class="p-company__wrapper__map">
+      </section>
+
+      <section class="p-contact luxy-el" data-speed-y="10" id="p-contact">
+         <h2 class="p-contact__title c-title">お問い合わせ</h2>
+         <div class="p-contact__wrapper">
+            <table class="p-contact__wrapper__table">
+               <tr class="p-contact__wrapper__table__tr">
+                  <td class="p-contact__wrapper__table__tr__item">お名前</th>
+                  <td class="p-contact__wrapper__table__tr__must"><span>必須</span></td>
+                  <td class="p-contact__wrapper__table__tr__form">
+                     <input class="p-contact__wrapper__table__tr__form__input" type="text" name="name">
+                  </td>
+               </tr>
+               <tr class="p-contact__wrapper__table__tr">
+                  <td class="p-contact__wrapper__table__tr__item">フリガナ</th>
+                  <td class="p-contact__wrapper__table__tr__must"><span>必須</span></td>
+                  <td class="p-contact__wrapper__table__tr__form">
+                     <input class="p-contact__wrapper__table__tr__form__input" type="text" name="name">
+                  </td>
+               </tr>
+               <tr class="p-contact__wrapper__table__tr">
+                  <td class="p-contact__wrapper__table__tr__item">電話番号</th>
+                  <td class="p-contact__wrapper__table__tr__must"><span>必須</span></td>
+                  <td class="p-contact__wrapper__table__tr__form">
+                     <input class="p-contact__wrapper__table__tr__form__input"  type="text" name="tel">
+                  </td>
+               </tr>
+               <tr class="p-contact__wrapper__table__tr">
+                  <td class="p-contact__wrapper__table__tr__item">メールアドレス</th>
+                  <td class="p-contact__wrapper__table__tr__must"><span>必須</span></td>
+                  <td class="p-contact__wrapper__table__tr__form">
+                     <input class="p-contact__wrapper__table__tr__form__email" type="text" name="email">
+                  </td>
+               </tr>
+               <tr class="p-contact__wrapper__table__tr">
+                  <td class="p-contact__wrapper__table__tr__item">職務経験</th>
+                  <td class="p-contact__wrapper__table__tr__must"><span>必須</span></td>
+                  <td class="p-contact__wrapper__table__tr__form">
+                     <input type="radio" name="experience" id="radio" value="あり" checked>
+                        <label for="radio">あり</label>
+                     <input type="radio" name="experience" id="radio" value="なし">
+                        <label for="radio">なし</label>
+                  </td>
+               </tr>
+               <tr class="p-contact__wrapper__table__tr">
+                  <td class="p-contact__wrapper__table__tr__item">所有資格</th>
+                  <td class="p-contact__wrapper__table__tr__must"><span>必須</span></td>
+                  <td class="p-contact__wrapper__table__tr__form">
+                     <input type="checkbox" name="certification" id="web" value="Web Designer">
+                        <label for="web">Web Designer</label>
+                     <input type="checkbox" name="certification" id="html" value="HTML Corder">
+                        <label for="html">HTML Corder</label>
+                     <input type="checkbox" name="certification" id="pro" value="Programer">
+                        <label for="pro">Programer</label>
+                     <input type="checkbox" name="certification" id="video" value="Video Producer">
+                        <label for="video">Video Producer</label><br>
+                     <input type="checkbox" name="certification" id="web" value="Web Designer">
+                        <label for="web">Web Designer</label>
+                     <input type="checkbox" name="certification" id="html" value="HTML Corder">
+                        <label for="html">HTML Corder</label>
+                     <input type="checkbox" name="certification" id="pro" value="Programer">
+                        <label for="pro">Programer</label>
+                     <input type="checkbox" name="certification" id="video" value="Video Producer">
+                        <label for="video">Video Producer</label>
+                  </td>
+               </tr>
+               <tr class="p-contact__wrapper__table__tr">
+                  <td class="p-contact__wrapper__table__tr__item">自己アピール</th>
+                  <td class="p-contact__wrapper__table__tr__must"><span>必須</span></td>
+                  <td class="p-contact__wrapper__table__tr__form">
+                     <textarea  class="p-contact__wrapper__table__tr__form__textarea" name="message" size="" placeholder=""></textarea>
+                  </td>
+               </tr>
+            </table>
+          </div><!--wrapper-->
+         <button>
+            <input type="submit" value="入力内容を確認する">
+         </button>
+      </section>
+
    </main>
+   </div><!--luxy-->
 
    <footer class="l-footer">
+      <p id="page-top" class="page-top"><a href="#">&#9650;</a></p>
       <div class="p-footer">
-       
+         <p class="p-footer__copyright">copyright(c) Mamasan＆company All Rights Reserved</p>
       </div><!--p-footer-->
    </footer>
 
@@ -114,6 +260,8 @@
    <script src="js/jquery-3.6.0.min.js"></script>
    <script src="js/slick-1.8.1/slick/slick.min.js"></script>
    <script src="js/slick-config.js"></script>
+   <script type="text/javascript" src="js/luxy.min.js" charset="utf-8"></script>
+   <script charset="utf-8">luxy.init();</script>
 
 </body>
 </html>

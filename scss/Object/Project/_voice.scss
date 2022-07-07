@@ -1,0 +1,38 @@
+@use "../../Foundation/mixin" as m;
+
+
+.p-voice {
+    padding:50px 20px; //section共通
+    &__wrapper {
+        margin:0 150px;
+        display:flex;
+        gap:20px;
+        &__mediatext {
+            display:grid;
+            grid-template-rows: 1fr 1fr;
+            gap:10px;
+            &__img {
+                display:flex;
+      
+                & img {
+                    border :1px solid #e0e0e0;
+                    object-fit:cover;
+                    max-height:190px;
+                    background-color:#ccc;
+                }
+                & figcaption {
+                    padding-left:10px;
+                    line-height:1.5rem;
+                }
+            }
+            &__text {
+                line-height:1.5rem;
+                padding:10px;
+                background:#99dced;
+                border-radius:10px;
+
+
+            }
+        }
+    }
+}

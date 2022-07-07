@@ -1,2 +1,56 @@
 @use "../Foundation/mixin" as m;
 
+//ページトップリンク
+
+.page-top {
+    width:50px;
+    height:50px;
+    font-size:30px;
+    background-color:#009da0;
+    text-align: center;
+    line-height:50px;
+    & a {
+        color:#fff;
+    }
+}
+ 
+//リンクを右下に固定
+#page-top {
+    position: fixed;
+    right: 20px;
+    bottom: 65px;
+    z-index: 2;
+    /*はじめは非表示(これ重要)*/
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+//上に上がる動き
+#page-top.UpMove {
+    animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime {
+    from {
+    opacity: 0;
+    transform: translateY(100px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+//下に下がる動き
+#page-top.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime {
+    from {
+    opacity: 1;
+    transform: translateY(0);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(100px);
+    }
+}
